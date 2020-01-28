@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "glip_bi_screenshot_maker"
+version = "0.1.0"
+description = "Application for making screenshots of BI data"
+authors = ["duch94 <vtduch@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiohttp = "^3.6.2"
+gunicorn = "^20.0.4"
+pyppeteer = "^0.0.25"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

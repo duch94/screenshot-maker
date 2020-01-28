@@ -1,0 +1,8 @@
+version: '3'
+services:
+  bi_screenshot_maker:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - "nginx.conf:/etc/nginx/nginx.conf:ro"
