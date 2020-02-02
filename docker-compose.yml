@@ -5,3 +5,6 @@ services:
     ports:
       - "8080:8080"
     user: "1001:1001"
+    cap_add:  # Capabilities are described here http://man7.org/linux/man-pages/man7/capabilities.7.html
+      # This capability allows current user of container to run chromium with sandboxes, where pages are executed
+      - "SYS_ADMIN"

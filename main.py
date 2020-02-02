@@ -12,7 +12,7 @@ async def get_screenshot(request: web.Request):
     logger.info("Received request: date_start=%s, date_end=%s" % (date_start, date_end))
     url = "https://yandex.ru/search/?text=%s_%s" % (date_start, date_end)
     css_sel = "html"
-    logger.info("Started taking screenshot for url %s with selector %s." % (url, css_sel))
+    logger.info("Started taking screenshot for url %s with css_selector='%s'." % (url, css_sel))
     screenshot = make_screenshot(url, css_sel)
     return web.Response(body=screenshot)
 
