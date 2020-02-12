@@ -3,5 +3,10 @@ Just use command `docker-compose down && docker-compose build && docker-compose 
 in this directory to build and run a container with app. 
 
 After that you can access 8080 port of it to make screenshots, for 
-example: `http://localhost:8080/get_screenshot/1111_000.png` in browser or 
-`curl 0.0.0.0:8080/get_screenshot/1111_000.png > 1111_000.png` in terminal.
+example: 
+```
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{"url": "http://yandex.ru", "actions": [{"action": "set_resolution", "width": 1920, "height": 1080}, {"action": "screenshot_element", "selector": "html"}]}' \
+0.0.0.0:8080/order_screenshot 
+``` 
