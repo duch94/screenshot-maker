@@ -9,7 +9,7 @@ import os
 import json
 
 logger = get_logger(__name__)
-path_to_images = os.path.join("/var", "tmp", "screenshots")
+path_to_images = os.path.join("screenshots")
 
 
 async def order_screenshot(request: web.Request) -> web.Response:

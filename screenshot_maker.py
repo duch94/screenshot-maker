@@ -7,7 +7,7 @@ from pyppeteer.page import Page
 from logger import get_logger
 
 logger = get_logger(__name__)
-path_to_images = os.path.join("/var", "tmp", "screenshots")
+path_to_images = os.path.join("screenshots")
 
 
 async def make_screenshot(img_id: str, url: str, actions: list):
